@@ -1,6 +1,7 @@
 """This module contains Paver tasks for managing Sphinx Search server."""
 
 import os
+import sys
 import time
 
 from paver.easy import error, info, needs, options, path, sh, task
@@ -57,7 +58,10 @@ def sphinx_daemon_start():
     if is_sphinx_daemon_running():
         error('Search daemon is already running.')
     else:
-        sh('searchd --config %s' % options.sphinx.config)
+        command = 'searchd --config %s' % options.sphinx.config
+        if sys.platform == 'win32':
+            command = 'start /B ' + command
+        sh(command)
         time.sleep(2)
 
 
