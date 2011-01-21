@@ -9,7 +9,6 @@ from paver.easy import error, info, needs, options, path, sh, task
 
 def is_process_running(pid):
     """Return True if a process with given process id is running."""
-    # TODO: Windows version of this function
     try:
         # Sending signal 0 to a process will raise an OSError if the
         # process is not running, and do nothing otherwise.
