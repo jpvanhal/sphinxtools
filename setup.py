@@ -9,7 +9,7 @@ CHANGES = open(os.path.join(HERE, 'CHANGES.rst')).read()
 
 setup(
     name='sphinxtools',
-    version=0.1,
+    version=0.2,
     description='Paver tasks for Sphinx Search server',
     long_description=README + '\n\n' + CHANGES,
     license="New BSD License",
