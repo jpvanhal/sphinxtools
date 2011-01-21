@@ -94,9 +94,9 @@ def sphinx_configure():
 
     This task uses standard Python string formatting to transform the template
     file in ``options.sphinx.config_template`` into a Sphinx configuration
-    file. The formatting operations uses the contents of
-    ``options.sphinx.config`` as keyword arguments. Finally, the built Sphinx
-    configuration file is written to the file in ``options.sphinx.config``.
+    file. The formatting operations uses the contents of ``options.sphinx`` as
+    keyword arguments. Finally, the built Sphinx configuration file is written
+    to the file in ``options.sphinx.config``.
 
     """
     template = path(options.sphinx.config_template).text()
